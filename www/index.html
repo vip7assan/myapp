@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+            <meta charset="utf-8">
+  
+    <title>myapp</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+    </head>
+   <body>
+
+
+
+
+<script id="country" type="text/x-handlebars-template">		
+
+       <option value="null" disabled="disabled" selected="selected">select your county</option>
+{{#each country}}
+      <option value="{{countryid}}">{{country}}</option> 
+      
+  {{/each}}    
+
+</script>
+
+<script id="sexs" type="text/x-handlebars-template">		
+
+       <option disabled="disabled" selected="selected">select your gender</option>
+{{#each sex}}
+      <option value="{{id}}">{{Sname}}</option> 
+      
+  {{/each}}    
+
+</script>
+
+<script id="rag" type="text/x-handlebars-template">		
+
+       <option disabled="disabled" selected="selected">select your ragion</option>
+{{#each region}}
+      <option value="{{id}}">{{Regions}}</option> 
+      
+  {{/each}}    
+
+</script>
+
+<script id="iqm" type="text/x-handlebars-template">		
+
+       <option disabled="disabled" selected="selected">--select--</option>
+{{#each iqama}}
+      <option value="{{id}}">{{Iname}}</option> 
+      
+  {{/each}}    
+
+</script>
+
+<script id="city" type="text/x-handlebars-template">		
+
+       <option disabled="disabled" selected="selected" value="">select your city</option>
+{{#each thatcity}}
+      <option value="{{id}}">{{citys}}</option> 
+      
+  {{/each}}    
+
+</script>
+
+
+<script id="stat" type="text/x-handlebars-template">		
+
+       <option disabled="disabled" selected="selected" value="">select your status</option>
+{{#each status}}
+      <option value="{{id}}">{{Mname}}</option> 
+      
+  {{/each}}    
+
+</script>
+<script id="lvl" type="text/x-handlebars-template">		
+
+       <option disabled="disabled" selected="selected" value="">select your level</option>
+{{#each level}}
+      <option value="{{id}}">{{Lname}}</option> 
+      
+  {{/each}}    
+
+</script>
+
+<script id="inter" type="text/x-handlebars-template">		
+
+       <option disabled="disabled" selected="selected" value="">select your interest</option>
+{{#each hop}}
+      <option value="{{id}}">{{Hname}}</option> 
+      
+  {{/each}}    
+
+</script>
+
+<script id="jobs" type="text/x-handlebars-template">		
+
+       <option disabled="disabled" selected="selected" value="">select your job</option>
+{{#each job}}
+      <option value="{{id}}">{{Jname}}</option> 
+      
+  {{/each}}    
+
+</script>
+
+
+
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#"><i class="glyphicon glyphicon-gift"></i>سجل واربح</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active" role="presentation"><a href="#">من نحن</a></li>
+                    <li role="presentation"><a href="#">تواصل </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-push-7 phone-preview">
+                    <div class="iphone-mockup"><img src="assets/img/iphone.svg" class="device">
+                        <div class="screen"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-md-pull-3 get-it">
+                    <h1>سجل واربح ايفون او عشرة الاف ريال</h1>
+                    <p>سجل عن طريق التطبيق لزيادت فرص ربحك</p>
+                    <p><a class="btn btn-primary btn-lg" role="button" href="#"><i class="fa fa-apple"></i> iso app</a><a class="btn btn-success btn-lg" role="button" href="#"><i class="fa fa-android"></i> android app</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="testimonials">
+        <h2 class="text-center">سجل معلوماتك!</h2>
+        <blockquote>
+            <p>fill out the form with your real information to win the prize </p>
+            <footer> Terms and conditions apply</footer>
+        </blockquote>
+        <div>
+            <form id="fill" onsubmit="return false">
+<legend></legend>
+    
+    <div id="Memail" class="form-group">
+        <div id="fname" class="name">
+          <label for="exampleInputEmail1">First Name</label>
+          <input type="text" class="form-control" id="Fname" aria-describedby="emailHelp" placeholder="الاسم" required="required">
+        </div>
+        <div id="lname" class="name">
+          <label for="exampleInputEmail1">Last Name</label>
+          <input type="text" class="form-control" id="Lname" aria-describedby="emailHelp" placeholder="العائله" required="required">
+        </div>
+       <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        -->
+   </div>
+  <div class="form-group">
+    <label for="n">Nationality</label>
+    <select class="form-control lone" id="n" required="required">
+
+
+<!---------------------------------------------------->
+
+
+
+    </select>
+  </div>
+    
+     <div class="form-group lone">
+    <label for="sex"></label>sex
+    <select class="form-control" id="sex">
+
+
+
+
+
+    </select>
+  </div>
+    
+     <div id="age" class="form-group">
+        <div id="fname" class="name">
+          <label for="y">year</label>
+          <select class="form-control" id="y">
+
+<option disabled="disabled" selected="selected" value="null">-select-</option>
+          <option>2016</option>
+          <option>2015</option>
+          <option>2014</option>
+          <option>2013</option>
+          <option>2012</option>
+          <option>2010</option>
+          <option>2000</option>
+          <option>1999</option>
+          <option>1998</option>
+          <option>1997</option>
+          <option>1996</option>
+          <option>1995</option>
+          <option>1994</option>
+          <option>1993</option>
+          <option>1992</option>
+          <option>1991</option>
+          <option>1990</option>
+          <option>1989</option>
+          <option>1988</option>
+          <option>1987</option>
+          <option>1986</option>
+          <option>1985</option>
+          <option>1984</option>
+          <option>1983</option>
+          <option>1982</option>
+          <option>1981</option>
+          <option>1980</option>
+          <option>1979</option>
+          <option>1978</option>
+          <option>1977</option>
+          <option>1976</option>
+          <option>1975</option>
+          <option>1974</option>
+          <option>1973</option>
+          <option>1972</option>
+          <option>1971</option>
+          <option>1970</option>
+          <option>1969</option>
+          <option>1968</option>
+          <option>1967</option>
+          <option>1966</option>
+          <option>1965</option>
+          <option>1964</option>
+          <option>1963</option>
+          <option>1962</option>
+          <option>1961</option>
+          <option>1960</option>
+          
+
+
+          </select>
+         </div>
+        <div id="lname" class="name">
+                   <label for="mon">month</label>
+          <select class="form-control" id="mon">
+  
+  <option disabled="disabled" selected="selected" value="null">-select-</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+  
+  
+          </select>  </div>
+    </div>
+    <div id="fullname" class="form-group">
+        <div id="fname" class="name">
+           <label for="eamil">Email</label>
+          <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" required="required">
+
+         </div>
+        <div id="lname" class="name">
+           <label for="vemail">Verify email</label>
+          <input type="email" class="form-control" id="vemail" aria-describedby="emailHelp" placeholder="Verify email" required="required">
+ 
+        </div>
+    </div>
+
+    
+       <div id="Memail" class="form-group">
+        <div id="fname" class="name">
+          <label for="exampleInputEmail1">phone number</label>
+          <input style="width: 100%" type="text" class="form-control" id="p" aria-describedby="emailHelp" placeholder="966xxxxxxxxx" required="required" onchange="myFunction(this)" >
+       </div>
+      
+   </div>
+    
+    
+     <div class="form-group">
+    <label for="r">Region</label>
+    <select class="form-control lone" id="r">
+
+
+
+
+
+    </select>
+  </div>
+    
+ <div class="form-group">
+    <label for="c">City</label>
+    <select class="form-control lone" id="c">
+      <option disabled="disabled" selected="selected">select Region first</option>
+
+    </select>
+  </div>
+    
+     <div class="form-group">
+    <label for="Iqama">Iqama status</label>
+    <select class="form-control lone" id="Iqama">
+
+
+
+
+
+    </select>
+  </div>
+         <div class="form-group">
+    <label for="m">Marital status</label>
+    <select class="form-control lone" id="m">
+
+
+
+
+    </select>
+  </div>
+    
+             <div class="form-group">
+    <label for="level">Education level</label>
+    <select class="form-control lone" id="level">
+
+
+
+
+    </select>
+  </div>
+    
+                 <div class="form-group">
+    <label for="interest">interest</label>
+    <select class="form-control lone" id="interest">
+
+
+
+
+
+    </select>
+  </div>
+    
+                   <div class="form-group">
+    <label for="job">Job</label>
+    <select class="form-control lone" id="job">
+
+
+
+    </select>
+  </div>
+    
+
+  
+ 
+  
+
+    <legend></legend>
+    
+ 
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" id="agree">
+      agree on terms
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+        </div>
+    </section>
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>increase your chances of winning </h2>
+                    <p>send the link to your friend and family. </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row icon-features">
+                        <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-gift"></i>
+                            <p>daily gifts</p>
+                        </div>
+                        <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-plane"></i>
+                            <p>flying tickets </p>
+                        </div>
+                        <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-fire"></i>
+                            <p>hot offers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>mr.hassan.aj © 2017</h5></div>
+                <div class="col-sm-6 social-icons"><a href="https://www.facebook.com/hassan.aljaffar.33"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/Vip7assanj"><i class="fa fa-twitter"></i></a><a href="https://www.instagram.com/vip07assan/"><i class="fa fa-instagram"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    	
+    	<script src="js/jQuery.2.1.js"></script>
+		<script src="js/handlebars-v3.0.3.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
