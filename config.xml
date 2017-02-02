@@ -8,5 +8,6 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <access origin="*" />
 </widget>
