@@ -11,6 +11,10 @@ $(function(){
        
        
        };
+       
+       
+       
+
         
 var mas= server.request({route:{app:'load'}});
 mas.done(function(data){
