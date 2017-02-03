@@ -14,6 +14,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     <gap:config-file platform="android" parent="/manifest">
      <application android:debuggable="true" />
 </gap:config-file>
-    <plugin name="com.surfernetwork.startapp" spec="1.0.0" source="pgb" />
+
 </widget>
 
